@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import Movies from "../components/Movies"; // Movies 컴포넌트를 import 해야 합니다
+import Movies from "../components/Movies"; 
 
 function Detail() {
-  const { id } = useParams(); // id를 추출합니다
+  const { id } = useParams(); 
   const [loading, setLoading] = useState(true);
   const [movie, setMovie] = useState(null);
   const apiURL = `https://yts.mx/api/v2/movie_details.json?movie_id=${id}`;
