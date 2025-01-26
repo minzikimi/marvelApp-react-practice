@@ -1,5 +1,6 @@
 import Movies from "../components/Movies";
 import { useState, useEffect } from "react";
+import "./Home.css"
 
 function Home() {
   const [loading, setLoading] = useState(true);
@@ -29,7 +30,7 @@ function Home() {
       ) : (
        
         <div> <h1>Movie List</h1>
-          {movies.map((movie) => (
+         <div className="movie-list"> {movies.map((movie) => (
             <Movies
               key={movie.id}
               id={movie.id}
@@ -42,7 +43,7 @@ function Home() {
               }
               genres={movie.genres}
             />
-          ))}
+          ))}</div>
         </div>
       )}
     </div>

@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Movies from "../components/Movies"; 
+import "./Detail.css"
 
 function Detail() {
   const { id } = useParams(); 
@@ -24,29 +25,28 @@ function Detail() {
       setLoading(false);
     }
   };
-
   return (
     <div className="container">
-    {loading ? (
-      <h1>Loading...</h1>
-    ) : (
-      <div>
-        <h1>Detail</h1>
-        {movie ? (
-          <Movies
-            key={movie.id}
-            id={movie.id}
-            coverImg={movie.medium_cover_image}
-            title={movie.title}
-            summary={movie.summary}
-            genres={movie.genres}
-          />
-        ) : (
-          <h1>Movie not found</h1>
-        )}
-      </div>
-    )}
-  </div>
+      {loading ? (
+        <h1 className="loading">Loading...</h1>
+      ) : (
+        <div className="movie-detail">
+          <h1>Movie Detail</h1>
+          {movie ? (
+            <Movies
+              key={movie.id}
+              id={movie.id}
+              coverImg={movie.medium_cover_image}
+              title={movie.title}
+              summary={movie.summary}
+              genres={movie.genres}
+            />
+          ) : (
+            <h2 className="error">Movie not found</h2>
+          )}
+        </div>
+      )}
+    </div>
   );
 }
 
