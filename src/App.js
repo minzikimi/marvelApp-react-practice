@@ -4,9 +4,9 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-
-import Home from "./routes/Home";
-import Detail from "./routes/Detail";
+import "./App.css";
+import Home from "./pages/Home";
+import Detail from "./pages/Detail";
 
 export default function App() {
   return (
@@ -14,7 +14,7 @@ export default function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/detail/:id" element={<Detail />} />
+        <Route path="/character/:id" element={<Detail />} />
       </Routes>
     </Router>
   );

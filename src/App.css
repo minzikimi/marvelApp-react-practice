@@ -1,0 +1,70 @@
+:root {
+    --marvel-dark: #131212; 
+    --marvel-text: #ffffff; 
+    --marvel-red:#e4002b;
+  }
+  
+  body {
+    background-color: var(--marvel-dark); 
+    color: var(--marvel-text); 
+    font-family: Arial, Helvetica, sans-serif;
+
+  }
+  
+  .container {
+    max-width: 1200px; 
+    margin: auto; 
+    padding: 20px; 
+  }
+
+
+img {
+  max-width: 170px;
+  height: auto; 
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+
+  
+  h1{
+    font-family: "Honk", system-ui;
+    font-size:6rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  h2{
+    color: var(--marvel-red);
+  }
+
+  h3 {
+    color: white;
+  }
+
+  li {
+    list-style-type: none; 
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    transition: background-color 0.3s ease; 
+  }
+  
+  li:hover {
+    background-color: var(--marvel-red);
+    cursor: pointer;
+  }
+
+.character-link {
+  text-decoration: none;
+  color: inherit; 
+}
+
+
+.character-link:hover {
+  color: var(--marvel-red);
+}
