@@ -26,7 +26,7 @@ function Detail() {
     }
 
     fetchCharacterDetail();
-  }, [id]);
+  }, [API_URL]);
 
   const handleBackToHome = () => {
     navigate('/');
