@@ -41,24 +41,9 @@ img {
     color: white;
   }
 
-  li {
+  ul {
     list-style-type: none; 
-    padding: 10px;
-    border: 1px solid white;
-    border-radius: 5px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-    transition: background-color 0.3s ease; 
-  }
-  
-  li:hover {
-    background-color: var(--marvel-red);
-    cursor: pointer;
-  }
-
+}
 .character-link {
   text-decoration: none;
   color: inherit; 
